@@ -4,10 +4,11 @@
     <projectFile>FancyConsoleTest/FancyConsoleTest.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5a8e786-2be5-49bb-9b77-2ecb18610e80" name="Default Changelist" comment="Forgot I put this on github.">
+    <list default="true" id="c5a8e786-2be5-49bb-9b77-2ecb18610e80" name="Default Changelist" comment="Fixed my idiotness by making seperators `:` and not `;` but it somehow  still worked on console just not in rider (for gray &amp; dark gray)">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/FancyConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/FancyConsole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyText.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.dll" afterDir="false" />
@@ -24,6 +25,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/3A4/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/11/Array.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///media/shoghi/Data/appdata/projects/C#/FancyConsoleTest/FancyConsoleTest/Utils/FancyColor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///media/shoghi/Data/appdata/projects/C#/FancyConsoleTest/FancyConsoleTest/Utils/FancyColor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/10/Array.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/38F06A60-2917-4752-A47B-E3FAB39B56A6/6/Console.cs" root0="SKIP_HIGHLIGHTING" />
@@ -42,10 +44,10 @@
       <option value="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/Tabbyroo.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/InputConsole.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/ConsoleUtils.cs" />
-      <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyText.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/GetTabbyThingy.cs" />
-      <option value="$PROJECT_DIR$/FancyConsoleTest/Program.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyColor.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyText.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/Program.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/FancyConsole.cs" />
     </changedPaths>
   </component>
@@ -101,7 +103,7 @@
       <updated>1608058023518</updated>
       <workItem from="1608058042245" duration="12478000" />
       <workItem from="1608071971972" duration="39759000" />
-      <workItem from="1608223892611" duration="3224000" />
+      <workItem from="1608223892611" duration="6093000" />
     </task>
     <task id="LOCAL-00001" summary="Forgot I put this on github.">
       <created>1608229116445</created>
@@ -110,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608229116445</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed my idiotness by making seperators `:` and not `;` but it somehow  still worked on console just not in rider (for gray &amp; dark gray)">
+      <created>1608229970735</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608229970735</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +141,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Forgot I put this on github." />
-    <option name="LAST_COMMIT_MESSAGE" value="Forgot I put this on github." />
+    <MESSAGE value="Fixed my idiotness by making seperators `:` and not `;` but it somehow  still worked on console just not in rider (for gray &amp; dark gray)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed my idiotness by making seperators `:` and not `;` but it somehow  still worked on console just not in rider (for gray &amp; dark gray)" />
   </component>
 </project>

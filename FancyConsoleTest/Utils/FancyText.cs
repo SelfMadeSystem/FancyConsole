@@ -13,26 +13,24 @@ namespace FancyConsoleTest.Utils
         //public bool Underline;
         //public bool Italic; //\x1b[1m
         //public bool Reset; //\x1b[0m
-        public FancyColor Color;
+        public FancyColor[] Colors;
 
         // public FancyColor BgColor; // Don't use this
         public FancyText Next;
 
-        public FancyText(string text, FancyText next = null) : this(text, FancyColor.Reset, next)
-        {
-        }
-
-        public FancyText(string text, FancyColor color, FancyText next = null)
+        public FancyText(string text, params FancyColor[] colors)
         {
             Text = text;
-            Color = color;
-            Next = next;
+            Colors = colors;
         }
 
         public void SetConsoleColor()
         {
             Console.ResetColor();
-            if (Color.IsColor) Console.ForegroundColor = Color.ConsoleColor;
+            foreach (var color in Colors)
+            {
+                if (color.IsColor) Console.ForegroundColor = color.ConsoleColor;
+            }
             // if (BgColor.IsColor) Console.BackgroundColor = BgColor.ConsoleColor;
         }
 
@@ -45,7 +43,7 @@ namespace FancyConsoleTest.Utils
                 if (c == '\n')
                 {
                     len = 0;
-                    list.Add(new FancyText(str, Color));
+                    list.Add(new FancyText(str, Colors));
                     str = "";
                 }
                 else
@@ -55,14 +53,14 @@ namespace FancyConsoleTest.Utils
                     if (len > ConsoleUtils.Width)
                     {
                         len = 0;
-                        list.Add(new FancyText(str, Color));
+                        list.Add(new FancyText(str, Colors));
                         str = c.ToString();
                     }
                     else str += c;
                 }
             }
 
-            if (!string.IsNullOrEmpty(str)) list.Add(new FancyText(str, Color));
+            if (!string.IsNullOrEmpty(str)) list.Add(new FancyText(str, Colors));
 
             return list;
         }
@@ -131,7 +129,7 @@ namespace FancyConsoleTest.Utils
 
         public string GetConsoleStringRaw()
         {
-            return Color.PrintFunc + Text;
+            return Colors.Aggregate("", (current, item) => current + item.PrintFunc) + Text;
         }
 
         public string GetConsoleString()

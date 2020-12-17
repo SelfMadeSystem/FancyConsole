@@ -87,6 +87,7 @@ namespace FancyConsoleTest.FancyConsole
                 Console.Write("\x1b[2K");
                 if (i-- > 0) Console.Write("\n");
             } while (i > 0);
+
             Console.SetCursorPosition(0, 0);
             Console.Write(s);
             Console.SetCursorPosition(Im.Cursor, ConsoleUtils.Height - 1);
@@ -122,15 +123,35 @@ namespace FancyConsoleTest.FancyConsole
 
         public void DrawHints()
         {
+            var selB = 0; // beginning
+            var selE = 0; // ending
+            var a = "";
             var s = "";
             for (var i = 0; i < Im.VisibleHints.Length; i++)
             {
                 var vh = Im.VisibleHints[i];
-                s += i == Im.HintsIndex ? FancyColor.Gray.PrintFunc : FancyColor.Reset.PrintFunc;
+                if (i == Im.HintsIndex)
+                {
+                    s += FancyColor.Gray.PrintFunc;
+                    selB = a.Length;
+                    selE = vh.Length;
+                }
+                else s += FancyColor.Reset.PrintFunc;
+
                 s += vh + " ";
+                a += vh + " ";
             }
 
             s += FancyColor.Reset.PrintFunc;
+            if (a.Length >= ConsoleUtils.Width)
+            {
+                var v = selB - ConsoleUtils.Width / 2;
+                var b = v > 0;
+                s = a.Substring(b ? v : 0, Math.Min(a.Length - v, ConsoleUtils.Width));
+                s = s.Insert(b ? ConsoleUtils.Width / 2 : selB, FancyColor.Gray.PrintFunc);
+                s = s.Insert((b ? ConsoleUtils.Width / 2 : selB) + selE + FancyColor.Gray.PrintFunc.Length,
+                    FancyColor.Reset.PrintFunc);
+            }
 
             Console.SetCursorPosition(0, ConsoleUtils.Height - 2);
             Console.Write("\x1b[2K");
@@ -190,11 +211,12 @@ namespace FancyConsoleTest.FancyConsole
                 case ConsoleKey.Backspace:
                     if (Cursor > 0)
                     {
-                        if (LeftInput.Length > 0 && LeftInput[^1] == ' ') SpaceReset();
+                        var reset = LeftInput.Length > 1 && LeftInput[^1] == ' ' || LeftInput.Length == 1;
                         LeftInput = LeftInput.Substring(0, LeftInput.Length - 1);
                         MoveCursor(-1);
                         UpdateInputs();
                         UpdateVisibleHints();
+                        if (reset) SpaceReset();
                     }
 
                     break;
@@ -253,7 +275,8 @@ namespace FancyConsoleTest.FancyConsole
                     {
                         FancyConsole.RefreshScreen();
                         return;
-                    } else AddInput(Key.KeyChar);
+                    }
+                    else AddInput(Key.KeyChar);
 
                     break;
                 default:
@@ -267,10 +290,19 @@ namespace FancyConsoleTest.FancyConsole
 
         public void Entered()
         {
-            FancyConsole.Log(new FancyText("[Entered] ", FancyColor.Green)
+            if (CurrentInput.ToLower().Equals("exit"))
             {
-                Next = new FancyText(CurrentInput)
-            });
+                FancyConsole.Log(new FancyText("[Exit] ", FancyColor.Red)
+                {
+                    Next = new FancyText("Shutting down...", FancyColor.Reset)
+                });
+                Environment.Exit(0);
+            }
+            else
+                FancyConsole.Log(new FancyText("[Entered] ", FancyColor.Green)
+                {
+                    Next = new FancyText(CurrentInput, FancyColor.Reset)
+                });
             History.Insert(0, CurrentInput);
             CurrentInput = "";
             LeftInput = "";
