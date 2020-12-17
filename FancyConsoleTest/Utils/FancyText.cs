@@ -52,7 +52,7 @@ namespace FancyConsoleTest.Utils
                 {
                     len++;
                     // Console.WriteLine("{" + Text + +len + "}");
-                    if (len >= ConsoleUtils.Width)
+                    if (len > ConsoleUtils.Width)
                     {
                         len = 0;
                         list.Add(new FancyText(str, Color));
@@ -73,7 +73,7 @@ namespace FancyConsoleTest.Utils
             var text = this;
             do
             {
-                var split = text.Split(lines.Count > 0 ? lines[^1].Text.Length: 0);
+                var split = text.Split(lines.Count > 0 ? lines[^1].GetWidthRaw(): 0);
                 if (split.Count == 0) continue;
                 // Console.WriteLine("{" + (lines.Count > 0 ? lines[^1].Text.Length : 0) + "}");
                 var first = split[0];

@@ -79,9 +79,14 @@ namespace FancyConsoleTest.FancyConsole
 
         public void DrawLogs()
         {
-            var s = Lm.VisibleLines().Aggregate("", (current, line) => current + (line.GetConsoleString() +
-                new string(' ',
-                    Math.Max(0, ConsoleUtils.Width - 1 - line.GetWidthRaw())) + "\n"));
+            var s = Lm.VisibleLines().Aggregate("", (current, line) => current + line.GetConsoleString() + "\n");
+            var i = s.Count(a => a == '\n');
+            Console.SetCursorPosition(0, 0);
+            do
+            {
+                Console.Write("\x1b[2K");
+                if (i-- > 0) Console.Write("\n");
+            } while (i > 0);
             Console.SetCursorPosition(0, 0);
             Console.Write(s);
             Console.SetCursorPosition(Im.Cursor, ConsoleUtils.Height - 1);
@@ -117,19 +122,18 @@ namespace FancyConsoleTest.FancyConsole
 
         public void DrawHints()
         {
-            var r = "";
             var s = "";
             for (var i = 0; i < Im.VisibleHints.Length; i++)
             {
                 var vh = Im.VisibleHints[i];
                 s += i == Im.HintsIndex ? FancyColor.Gray.PrintFunc : FancyColor.Reset.PrintFunc;
                 s += vh + " ";
-                r += vh + " ";
             }
 
-            s += FancyColor.Reset.PrintFunc + new string(' ', ConsoleUtils.Width - r.Length - 1);
+            s += FancyColor.Reset.PrintFunc;
 
             Console.SetCursorPosition(0, ConsoleUtils.Height - 2);
+            Console.Write("\x1b[2K");
             Console.Write(s);
             Console.SetCursorPosition(Im.Cursor, ConsoleUtils.Height - 1);
         }
@@ -177,9 +181,6 @@ namespace FancyConsoleTest.FancyConsole
             });*/
             switch (Key.Key)
             {
-                case ConsoleKey.Escape:
-                    FancyConsole.RefreshScreen();
-                    return;
                 case ConsoleKey.Tab:
                     if (Hints == null || Hints.Length == 0) GetHints();
                     else if (Key.Modifiers.HasFlag(ConsoleModifiers.Shift)) DecrHint();
@@ -246,6 +247,14 @@ namespace FancyConsoleTest.FancyConsole
                 case ConsoleKey.End:
                     Lm.Scroll = Math.Max(Lm.Lines.Count - PrintManager.MaxLines() + 1, 0);
                     Pm.DrawLogs();
+                    break;
+                case ConsoleKey.R:
+                    if (Key.Modifiers.HasFlag(ConsoleModifiers.Control))
+                    {
+                        FancyConsole.RefreshScreen();
+                        return;
+                    } else AddInput(Key.KeyChar);
+
                     break;
                 default:
                     AddInput(Key.KeyChar);
@@ -339,7 +348,7 @@ namespace FancyConsoleTest.FancyConsole
 
         public void AddInput(char c)
         {
-            if (c <= '\u0013') return;
+            if (c <= '\u001F') return;
             LeftInput += c;
             UpdateInputs();
             MoveCursor(1);
@@ -400,7 +409,9 @@ namespace FancyConsoleTest.FancyConsole
         public void Log(FancyText text)
         {
             Logs.Insert(0, text);
-            Lines.InsertRange(0, text.GetLines());
+            var lines = text.GetLines();
+            Lines.InsertRange(0, lines);
+            if (Scroll > 0) Scroll += lines.Count;
         }
 
         public void RefreshLines()

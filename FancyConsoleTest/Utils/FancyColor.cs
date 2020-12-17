@@ -11,8 +11,8 @@ namespace FancyConsoleTest.Utils
         public static readonly FancyColor DarkRed = new FancyColor('4', "31", 0xAA0000, ConsoleColor.DarkRed);
         public static readonly FancyColor DarkPurple = new FancyColor('5', "35", 0xAA00AA, ConsoleColor.DarkMagenta);
         public static readonly FancyColor Gold = new FancyColor('6', "33", 0xFFAA00, ConsoleColor.DarkYellow);
-        public static readonly FancyColor Gray = new FancyColor('7', "90", 0xAAAAAA, ConsoleColor.Gray);
-        public static readonly FancyColor DarkGray = new FancyColor('8', "40", 0x555555, ConsoleColor.DarkGray);
+        public static readonly FancyColor Gray = new FancyColor('7', "m\x1b[38:5:244", 0xAAAAAA, ConsoleColor.Gray);
+        public static readonly FancyColor DarkGray = new FancyColor('8', "m\x1b[38:5:237", 0x555555, ConsoleColor.DarkGray);
         public static readonly FancyColor Blue = new FancyColor('9', "94", 0x5555FF, ConsoleColor.Blue);
         public static readonly FancyColor Green = new FancyColor('a', "92", 0x55FF55, ConsoleColor.Green);
         public static readonly FancyColor Aqua = new FancyColor('b', "96", 0x55FFFF, ConsoleColor.Cyan);

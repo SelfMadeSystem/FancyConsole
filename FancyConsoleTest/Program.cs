@@ -52,19 +52,65 @@ namespace FancyConsoleTest
                 new Thread(FancyConsole.FancyConsole.StartInput).Start();
                 FancyConsole.FancyConsole.Log(new FancyText("[Warning] ", FancyColor.Yellow)
                 {
-                    Next = new FancyText("Resizing of window will cause issues. Press ESC to refresh screen.")
+                    Next = new FancyText("Resizing of window will cause issues. Press Ctrl-R to refresh screen.")
                 });
                 FancyConsole.FancyConsole.Log(new FancyText("[Warning] ", FancyColor.Yellow)
                 {
                     Next = new FancyText("If you are running this in Rider, there will be bugs!!!")
                 });
-                for (var i = 0; i < 200; i++)
+                /*for (var i = 0; i < 200; i++)
                 {
                     FancyConsole.FancyConsole.Log(new FancyText("[Spam] ", FancyColor.Gold)
                     {
                         Next = new FancyText(i.ToString())
                     });
-                }
+                }*/
+                FancyConsole.FancyConsole.Log(new FancyText("Black ", FancyColor.Black)
+                {
+                    Next = new FancyText("DarkBlue ", FancyColor.DarkBlue)
+                    {
+                        Next = new FancyText("DarkGreen ", FancyColor.DarkGreen)
+                        {
+                            Next = new FancyText("DarkAqua ", FancyColor.DarkAqua)
+                            {
+                                Next = new FancyText("DarkRed ", FancyColor.DarkRed)
+                                {
+                                    Next = new FancyText("DarkPurple ", FancyColor.DarkPurple)
+                                    {
+                                        Next = new FancyText("Gold ", FancyColor.Gold)
+                                        {
+                                            Next = new FancyText("Gray ", FancyColor.Gray)
+                                            {
+                                                Next = new FancyText("DarkGray ", FancyColor.DarkGray)
+                                                {
+                                                    Next = new FancyText("Blue ", FancyColor.Blue)
+                                                    {
+                                                        Next = new FancyText("Green ", FancyColor.Green)
+                                                        {
+                                                            Next = new FancyText("Aqua ", FancyColor.Aqua)
+                                                            {
+                                                                Next = new FancyText("Red ", FancyColor.Red)
+                                                                {
+                                                                    Next = new FancyText("Purple ", FancyColor.Purple)
+                                                                    {
+                                                                        Next = new FancyText("Yellow ", FancyColor.Yellow)
+                                                                        {
+                                                                            Next = new FancyText("White ", FancyColor.White)
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
                 FancyConsole.FancyConsole.StartScreen();
             }
             catch (Exception e)

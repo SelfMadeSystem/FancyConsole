@@ -4,11 +4,25 @@
     <projectFile>FancyConsoleTest/FancyConsoleTest.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5a8e786-2be5-49bb-9b77-2ecb18610e80" name="Default Changelist" comment="" />
+    <list default="true" id="c5a8e786-2be5-49bb-9b77-2ecb18610e80" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/FancyConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/FancyConsole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/Utils/GetTabbyThingy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/Utils/GetTabbyThingy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/3A4/List.cs" root0="SKIP_HIGHLIGHTING" />
@@ -30,14 +44,15 @@
       <option value="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/Tabbyroo.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/InputConsole.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/ConsoleUtils.cs" />
-      <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyText.cs" />
-      <option value="$PROJECT_DIR$/FancyConsoleTest/Program.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyColor.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyText.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/GetTabbyThingy.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/Program.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/FancyConsole.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lhn7XSWKMCDENfvJiTpXdAhsvX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,7 +72,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.FancyConsoleTest">
+  <component name="RunManager">
     <configuration name="FancyConsoleTest" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -86,7 +101,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608058023518</updated>
       <workItem from="1608058042245" duration="12478000" />
-      <workItem from="1608071971972" duration="38224000" />
+      <workItem from="1608071971972" duration="39759000" />
+      <workItem from="1608223892611" duration="2286000" />
     </task>
     <servers />
   </component>

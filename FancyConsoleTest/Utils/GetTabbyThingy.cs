@@ -33,23 +33,23 @@ namespace FancyConsoleTest.Utils
                 return teens[number - 10];
 
             if (number < 100)
-                return tens[number / 10] + ((number % 10 != 0) ? " " + NameForNumber(number % 10) : "");
+                return tens[number / 10] + ((number % 10 != 0) ? "-" + NameForNumber(number % 10) : "");
 
             if (number < 1000)
-                return NameForNumber(number / 100) + " hundred" +
-                       ((number % 100 != 0) ? " " + NameForNumber(number % 100) : "");
+                return NameForNumber(number / 100) + "-hundred" +
+                       ((number % 100 != 0) ? "-" + NameForNumber(number % 100) : "");
 
             if (number < 1000000)
-                return NameForNumber(number / 1000) + " thousand" +
-                       ((number % 1000 != 0) ? " " + NameForNumber(number % 1000) : "");
+                return NameForNumber(number / 1000) + "-thousand" +
+                       ((number % 1000 != 0) ? "-" + NameForNumber(number % 1000) : "");
 
             if (number < 1000000000)
-                return NameForNumber(number / 1000000) + " million" +
-                       ((number % 1000000 != 0) ? " " + NameForNumber(number % 1000000) : "");
+                return NameForNumber(number / 1000000) + "-million" +
+                       ((number % 1000000 != 0) ? "-" + NameForNumber(number % 1000000) : "");
 
             if (number < 1000000000000)
-                return NameForNumber(number / 1000000000) + " billion" +
-                       ((number % 1000000000 != 0) ? " " + NameForNumber(number % 1000000000) : "");
+                return NameForNumber(number / 1000000000) + "-billion" +
+                       ((number % 1000000000 != 0) ? "-" + NameForNumber(number % 1000000000) : "");
 
             return "error";
         }
