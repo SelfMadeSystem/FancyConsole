@@ -90,35 +90,48 @@ namespace FancyConsoleTest.FancyConsole
 
             Console.SetCursorPosition(0, 0);
             Console.Write(s);
-            Console.SetCursorPosition(Im.Cursor, ConsoleUtils.Height - 1);
+            ResetCursor();
         }
+
+        public static int InputWidth => ConsoleUtils.Width * 5 / 6;
+        private bool _longInput = false;
 
         public void DrawInput()
         {
-            var tooLong = Im.CurrentInput.Length + Im.CurrentHint.Length - Im.CurrentArg.Length - 1 >
-                          ConsoleUtils.Width;
-            // var longBy = rawText.Length - ConsoleUtils.Width;
-            if (tooLong)
+            var b = string.IsNullOrEmpty(Im.CurrentHint) || (Im.CurrentHint.Length < Im.CurrentArg.Length)
+                ? ""
+                : Im.CurrentHint.Substring(Im.CurrentArg.Length) + " ";
+            var a = Im.LeftInput + b + Im.RightInput;
+
+            var s = Im.LeftInput + FancyColor.Gray.PrintFunc + b + FancyColor.Reset.PrintFunc + Im.RightInput;
+            _longInput = false;
+            if (a.Length >= InputWidth)
             {
-                Console.SetCursorPosition(0, ConsoleUtils.Height - 1);
-                Console.Write("~~ Text too long, placeholder, please finish me thx ~~");
-            }
-            else
-            {
-                var s = "";
-                s += FancyColor.Blue.PrintFunc + Im.InputStrip +
-                     FancyColor.Red.PrintFunc + Im.CurrentArg + FancyColor.Gray.PrintFunc +
-                     (string.IsNullOrEmpty(Im.CurrentHint) ? "" : Im.CurrentHint.Substring(Im.CurrentArg.Length)) +
-                     FancyColor.Reset.PrintFunc +
-                     Im.RightInput;
-                // s += new string(' ',
-                //     ConsoleUtils.Width - Im.CurrentInput.Length + Im.CurrentHint.Length - Im.CurrentArg.Length);
-                Console.SetCursorPosition(0, ConsoleUtils.Height - 1);
-                Console.Write("\x1b[2K");
-                Console.Write(s);
+                if (Im.Cursor >= InputWidth)
+                {
+                    s = a.Substring(Im.Cursor - InputWidth,
+                        Math.Min(a.Length - (Im.Cursor - InputWidth), ConsoleUtils.Width));
+                    if (!string.IsNullOrEmpty(Im.CurrentHint))
+                    {
+                        s = s.Insert(InputWidth, FancyColor.Gray.PrintFunc)
+                            .Insert(InputWidth + FancyColor.Gray.PrintFunc.Length +
+                                    (Im.CurrentHint == null ? 0 : Im.CurrentHint.Length - Im.CurrentArg.Length),
+                                FancyColor.Reset.PrintFunc);
+                    }
+
+                    _longInput = true;
+                }
+                else
+                    s = a.Substring(0, Math.Min(a.Length, ConsoleUtils.Width))
+                        .Insert(Im.LeftInput.Length, FancyColor.Gray.PrintFunc)
+                        .Insert(Im.LeftInput.Length + FancyColor.Gray.PrintFunc.Length + Im.CurrentHint?.Length ?? 0,
+                            FancyColor.Reset.PrintFunc);
             }
 
-            Console.SetCursorPosition(Im.Cursor, ConsoleUtils.Height - 1);
+            Console.SetCursorPosition(0, ConsoleUtils.Height - 1);
+            Console.Write("\x1b[2K");
+            Console.Write(FancyColor.Reset.PrintFunc + s);
+            ResetCursor();
         }
 
         public void DrawHints()
@@ -148,15 +161,20 @@ namespace FancyConsoleTest.FancyConsole
                 var v = selB - ConsoleUtils.Width / 2;
                 var b = v > 0;
                 s = a.Substring(b ? v : 0, Math.Min(a.Length - v, ConsoleUtils.Width));
-                s = s.Insert(b ? ConsoleUtils.Width / 2 : selB, FancyColor.Gray.PrintFunc);
-                s = s.Insert((b ? ConsoleUtils.Width / 2 : selB) + selE + FancyColor.Gray.PrintFunc.Length,
-                    FancyColor.Reset.PrintFunc);
+                s = s.Insert(b ? ConsoleUtils.Width / 2 : selB, FancyColor.Gray.PrintFunc)
+                    .Insert((b ? ConsoleUtils.Width / 2 : selB) + selE + FancyColor.Gray.PrintFunc.Length,
+                        FancyColor.Reset.PrintFunc);
             }
 
             Console.SetCursorPosition(0, ConsoleUtils.Height - 2);
             Console.Write("\x1b[2K");
             Console.Write(s);
-            Console.SetCursorPosition(Im.Cursor, ConsoleUtils.Height - 1);
+            ResetCursor();
+        }
+
+        public void ResetCursor()
+        {
+            Console.SetCursorPosition(_longInput ? InputWidth : Im.Cursor, ConsoleUtils.Height - 1);
         }
 
         public static int MaxLines()
@@ -233,16 +251,16 @@ namespace FancyConsoleTest.FancyConsole
                 case ConsoleKey.LeftArrow:
                     MoveCursor(-1);
                     UpdateLeftRight();
+                    UpdateInputs();
                     if (LeftInput.Length > 0 && LeftInput[^1] == ' ') SpaceReset();
                     else UpdateVisibleHints();
-                    UpdateInputs();
                     break;
                 case ConsoleKey.RightArrow:
                     MoveCursor(1);
                     UpdateLeftRight();
+                    UpdateInputs();
                     if (LeftInput.Length > 0 && LeftInput[^1] == ' ') SpaceReset();
                     else UpdateVisibleHints();
-                    UpdateInputs();
                     break;
                 case ConsoleKey.Enter:
                     if (string.IsNullOrEmpty(CurrentHint)) Entered();
@@ -303,6 +321,7 @@ namespace FancyConsoleTest.FancyConsole
                 {
                     Next = new FancyText(CurrentInput, FancyColor.Reset)
                 });
+
             History.Insert(0, CurrentInput);
             CurrentInput = "";
             LeftInput = "";
@@ -330,9 +349,9 @@ namespace FancyConsoleTest.FancyConsole
         {
             var lower = CurrentArg.ToLower();
 
-            if (VisibleHints.Length <= HintsIndex) HintsIndex = 0;
 
             VisibleHints = Hints.Where(hint => hint.ToLower().StartsWith(lower)).ToArray();
+            if (HintsIndex >= VisibleHints.Length) HintsIndex = 0;
             CurrentHint = VisibleHints.Length > HintsIndex ? VisibleHints[HintsIndex] : "";
         }
 
