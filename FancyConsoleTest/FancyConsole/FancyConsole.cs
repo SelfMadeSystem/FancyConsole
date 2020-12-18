@@ -214,10 +214,13 @@ namespace FancyConsoleTest.FancyConsole
 
         public void ParseInput()
         {
-            /*FancyConsole.Log(new FancyText("[Key] ", FancyColor.Green)
-            {
-                Next = new FancyText(Key.Key + ":" + Key.Modifiers + ":" + Key.Modifiers.HasFlag(ConsoleModifiers.Shift) + ":" + ((int) Key.KeyChar))
-            });*/
+            if (FancyConsole.Debug)
+                FancyConsole.Log(new FancyText("[Key] ", FancyColor.Green)
+                {
+                    Next = new FancyText(
+                        Key.Key + ":" + Key.Modifiers + ":" + Key.Modifiers.HasFlag(ConsoleModifiers.Shift) + ":" +
+                        ((int) Key.KeyChar), FancyColor.Reset)
+                });
             switch (Key.Key)
             {
                 case ConsoleKey.Tab:
@@ -263,7 +266,7 @@ namespace FancyConsoleTest.FancyConsole
                     else UpdateVisibleHints();
                     break;
                 case ConsoleKey.Enter:
-                    if (string.IsNullOrEmpty(CurrentHint)) Entered();
+                    if (string.IsNullOrEmpty(CurrentHint) || Key.Modifiers.HasFlag(ConsoleModifiers.Shift)) Entered();
                     else SelectHint();
                     break;
                 case ConsoleKey.PageUp: //For some reason, shift + arrow = Page
@@ -288,6 +291,12 @@ namespace FancyConsoleTest.FancyConsole
                     Lm.Scroll = Math.Max(Lm.Lines.Count - PrintManager.MaxLines() + 1, 0);
                     Pm.DrawLogs();
                     break;
+                case ConsoleKey.Escape:
+                    Hints = new string[0];
+                    VisibleHints = new string[0];
+                    CurrentHint = "";
+                    HintsIndex = -1;
+                    break;
                 case ConsoleKey.R:
                     if (Key.Modifiers.HasFlag(ConsoleModifiers.Control))
                     {
@@ -308,19 +317,30 @@ namespace FancyConsoleTest.FancyConsole
 
         public void Entered()
         {
-            if (CurrentInput.ToLower().Equals("exit"))
+            switch (CurrentInput.ToLower())
             {
-                FancyConsole.Log(new FancyText("[Exit] ", FancyColor.Red)
-                {
-                    Next = new FancyText("Shutting down...", FancyColor.Reset)
-                });
-                Environment.Exit(0);
+                case "exit":
+                    FancyConsole.Log(new FancyText("[Exit] ", FancyColor.Red)
+                    {
+                        Next = new FancyText("Shutting down...", FancyColor.Reset)
+                    });
+                    Environment.Exit(0);
+                    break;
+                case "debug":
+                    FancyConsole.Debug = !FancyConsole.Debug;
+                    FancyConsole.Log(new FancyText("[Debug] ", FancyColor.Aqua)
+                    {
+                        Next = FancyConsole.Debug ? new FancyText("Enabled", FancyColor.Green) :
+                            new FancyText("Disabled", FancyColor.Red)
+                    });
+                    break;
+                default:
+                    FancyConsole.Log(new FancyText("[Entered] ", FancyColor.Green)
+                    {
+                        Next = new FancyText(CurrentInput, FancyColor.Reset)
+                    });
+                    break;
             }
-            else
-                FancyConsole.Log(new FancyText("[Entered] ", FancyColor.Green)
-                {
-                    Next = new FancyText(CurrentInput, FancyColor.Reset)
-                });
 
             History.Insert(0, CurrentInput);
             CurrentInput = "";
@@ -341,8 +361,8 @@ namespace FancyConsoleTest.FancyConsole
             Hints = new string[0];
             VisibleHints = new string[0];
             CurrentHint = "";
-            HintsIndex = 0;
-            GetHints();
+            HintsIndex = -1;
+            GetHintsR();
         }
 
         public void UpdateVisibleHints()
@@ -352,7 +372,7 @@ namespace FancyConsoleTest.FancyConsole
 
             VisibleHints = Hints.Where(hint => hint.ToLower().StartsWith(lower)).ToArray();
             if (HintsIndex >= VisibleHints.Length) HintsIndex = 0;
-            CurrentHint = VisibleHints.Length > HintsIndex ? VisibleHints[HintsIndex] : "";
+            CurrentHint = VisibleHints.Length > HintsIndex && HintsIndex > 0 ? VisibleHints[HintsIndex] : "";
         }
 
         public void IncrHint()
@@ -378,10 +398,16 @@ namespace FancyConsoleTest.FancyConsole
             SpaceReset();
         }
 
-        public void GetHints()
+        public void GetHintsR()
         {
             Hints = GetTabbyThingy.GetHints(LeftInput).ToArray();
             if (Hints.Length == 1) IncrHint();
+            UpdateVisibleHints();
+        }
+
+        public void GetHints()
+        {
+            GetHintsR();
             UpdateVisibleHints();
         }
 

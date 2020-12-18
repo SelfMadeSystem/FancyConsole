@@ -4,7 +4,7 @@
     <projectFile>FancyConsoleTest/FancyConsoleTest.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5a8e786-2be5-49bb-9b77-2ecb18610e80" name="Default Changelist" comment="Fixed smth, added multiple colours to FancyText, and added nice tab selection when hints length supersedes max width.">
+    <list default="true" id="c5a8e786-2be5-49bb-9b77-2ecb18610e80" name="Default Changelist" comment="Fixed scrolling issue.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/FancyConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/FancyConsole.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.dll" afterDir="false" />
@@ -35,6 +35,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8C0ECD06-9F4E-4803-89F2-F3488D203E9C/2C/Sum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3B6C5D66-DCBD-4F65-89EC-674981B6B4E4/8c/90529483/ConsoleCancelEventArgs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8C0ECD06-9F4E-4803-89F2-F3488D203E9C/26/Select.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///media/shoghi/Data/appdata/projects/C#/FancyConsoleTest/FancyConsoleTest/FancyConsole/FancyConsole.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/174/StringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8C0ECD06-9F4E-4803-89F2-F3488D203E9C/2E/ToCollection.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -102,7 +103,7 @@
       <updated>1608058023518</updated>
       <workItem from="1608058042245" duration="12478000" />
       <workItem from="1608071971972" duration="39759000" />
-      <workItem from="1608223892611" duration="14523000" />
+      <workItem from="1608223892611" duration="16753000" />
     </task>
     <task id="LOCAL-00001" summary="Forgot I put this on github.">
       <created>1608229116445</created>
@@ -125,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608233422521</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed scrolling issue.">
+      <created>1608250555353</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608250555353</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +157,7 @@
     <MESSAGE value="Forgot I put this on github." />
     <MESSAGE value="Fixed my idiotness by making seperators `:` and not `;` but it somehow  still worked on console just not in rider (for gray &amp; dark gray)" />
     <MESSAGE value="Fixed smth, added multiple colours to FancyText, and added nice tab selection when hints length supersedes max width." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed smth, added multiple colours to FancyText, and added nice tab selection when hints length supersedes max width." />
+    <MESSAGE value="Fixed scrolling issue." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed scrolling issue." />
   </component>
 </project>
