@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelUserStore">
-    <attachedFolders />
-    <explicitIncludes />
+    <attachedFolders>
+      <Path>Linux</Path>
+      <Path>Windows</Path>
+    </attachedFolders>
+    <explicitIncludes>
+      <Path>Linux</Path>
+      <Path>Windows</Path>
+    </explicitIncludes>
     <explicitExcludes />
   </component>
 </project>

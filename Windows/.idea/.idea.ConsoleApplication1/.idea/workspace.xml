@@ -4,11 +4,35 @@
     <projectFile>ConsoleApplication1/ConsoleApplication1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eee31b26-836c-4124-80b4-0bae0637e8ca" name="Default Changelist" comment="" />
+    <list default="true" id="eee31b26-836c-4124-80b4-0bae0637e8ca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.FancyConsoleTest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.FancyConsoleTest/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.FancyConsoleTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.FancyConsoleTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linux/.idea/.idea.FancyConsoleTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Linux/.idea/.idea.FancyConsoleTest/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linux/.idea/.idea.FancyConsoleTest/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Linux/.idea/.idea.FancyConsoleTest/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linux/.idea/.idea.FancyConsoleTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Linux/.idea/.idea.FancyConsoleTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/FancyConsoleTest.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/FancyConsoleTest.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../Linux/FancyConsoleTest/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/FancyConsole/FancyConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/FancyConsole/FancyConsole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -18,6 +42,7 @@
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lo63NHDhXWVVFGJdqimFy0jwrQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,14 +89,26 @@
       <option name="presentableId" value="Default" />
       <updated>1608250898457</updated>
       <workItem from="1608250915599" duration="2284000" />
+      <workItem from="1608315434592" duration="1290000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

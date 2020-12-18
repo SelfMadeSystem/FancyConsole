@@ -26,11 +26,11 @@ namespace FancyConsoleTest.FancyConsole
 
         public static void StartScreen()
         {
-            while (true)
+            /*while (true)
             {
-                Task.Delay(1000).Wait();
-                Pm.DrawLogs();
-            }
+                Task.Delay(50).Wait();
+                Pm.RefreshScreen();
+            }*/
         }
 
         // Do this async
@@ -75,6 +75,7 @@ namespace FancyConsoleTest.FancyConsole
             ConsoleUtils.SetConsoleLine('═');
             DrawLogs();
             DrawInput();
+            DrawHints();
         }
 
         public void DrawLogs()
@@ -311,8 +312,9 @@ namespace FancyConsoleTest.FancyConsole
                     break;
             }
 
-            Pm.DrawInput();
+            //Pm.DrawLogs();
             Pm.DrawHints();
+            Pm.DrawInput();
         }
 
         public void Entered()
