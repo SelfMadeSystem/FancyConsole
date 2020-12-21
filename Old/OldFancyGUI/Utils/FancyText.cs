@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace FancyConsoleTest.Utils
+namespace FancyConsoleTest.Old.Utils
 {
     public class FancyText
     {

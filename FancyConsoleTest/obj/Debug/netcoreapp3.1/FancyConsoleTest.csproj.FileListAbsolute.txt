@@ -17,9 +17,13 @@ D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\bin\Debug\netcoreapp3.1
 D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\bin\Debug\netcoreapp3.1\FancyConsoleTest.runtimeconfig.dev.json
 D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\bin\Debug\netcoreapp3.1\FancyConsoleTest.dll
 D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\bin\Debug\netcoreapp3.1\FancyConsoleTest.pdb
-D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\obj\Debug\netcoreapp3.1\FancyConsoleTest.csproj.CoreCompileInputs.cache
 D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\obj\Debug\netcoreapp3.1\FancyConsoleTest.AssemblyInfoInputs.cache
 D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\obj\Debug\netcoreapp3.1\FancyConsoleTest.AssemblyInfo.cs
 D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\obj\Debug\netcoreapp3.1\FancyConsoleTest.dll
 D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\obj\Debug\netcoreapp3.1\FancyConsoleTest.pdb
 D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\obj\Debug\netcoreapp3.1\FancyConsoleTest.csprojAssemblyReference.cache
+D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\obj\Debug\netcoreapp3.1\FancyConsoleTest.genruntimeconfig.cache
+D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\obj\Debug\netcoreapp3.1\FancyConsoleTest.csproj.CoreCompileInputs.cache
+D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\bin\Debug\netcoreapp3.1\NStack.dll
+D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\bin\Debug\netcoreapp3.1\Terminal.Gui.dll
+D:\appdata\projects\C#\FancyConsoleTest\FancyConsoleTest\obj\Debug\netcoreapp3.1\FancyConsoleTest.csproj.CopyComplete

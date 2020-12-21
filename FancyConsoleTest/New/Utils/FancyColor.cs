@@ -1,6 +1,6 @@
 using System;
 
-namespace FancyConsoleTest.Utils
+namespace FancyConsoleTest.New.Utils
 {
     public class FancyColor
     {

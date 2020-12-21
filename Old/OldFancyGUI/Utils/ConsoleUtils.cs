@@ -1,6 +1,6 @@
 using System;
 
-namespace FancyConsoleTest.Utils {
+namespace FancyConsoleTest.Old.Utils {
     public class ConsoleUtils {
         private static TermType _consoleColorSupportType = null;
         public static int Width => Console.BufferWidth;
@@ -34,7 +34,7 @@ namespace FancyConsoleTest.Utils {
         public static sbyte GetColorSupport() {
             return OColorSupport < 0 ? GetTermType().ColorSupport : OColorSupport;
         }
-        public static bool GetMinimal() {
+        public static bool IsMinimal() {
             return OMinimal < 0 ? GetTermType().Minimal : OMinimal > 0;
         }
 

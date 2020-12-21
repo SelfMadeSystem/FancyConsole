@@ -1,13 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using FancyConsoleTest.Utils;
+using FancyConsoleTest.Old.Utils;
 
-namespace FancyConsoleTest.FancyConsole {
+namespace FancyConsoleTest.Old.FancyConsole {
     public class FancyConsole {
         public static object LockObj = new object();
         public static bool Debug = false;
@@ -103,7 +100,7 @@ namespace FancyConsoleTest.FancyConsole {
         }
 
         public static void StartScreen() {
-            if (ConsoleUtils.GetMinimal()) return;
+            if (ConsoleUtils.IsMinimal()) return;
             while (true) {
                 Task.Delay(1000).Wait();
                 Pm.DrawLogs();
@@ -126,7 +123,7 @@ namespace FancyConsoleTest.FancyConsole {
         }
     }
 
-    internal class PrintManager {
+    public class PrintManager {
         private static InputManager Im => FancyConsole.Im;
         private static LogManager Lm => FancyConsole.Lm;
 
@@ -135,7 +132,8 @@ namespace FancyConsoleTest.FancyConsole {
         }
 
         public void Reset() {
-            Console.Write("\x001bc");
+            if (ConsoleUtils.GetColorSupport() == 2) Console.Write("\x001bc");
+            else Console.Clear();
         }
 
         public void RefreshScreen() {
@@ -247,7 +245,7 @@ namespace FancyConsoleTest.FancyConsole {
         }
     }
 
-    internal class InputManager {
+    public class InputManager {
         private static PrintManager Pm => FancyConsole.Pm;
         private static LogManager Lm => FancyConsole.Lm;
 
@@ -491,7 +489,7 @@ namespace FancyConsoleTest.FancyConsole {
         }
     }
 
-    internal class LogManager {
+    public class LogManager {
         private static PrintManager Pm => FancyConsole.Pm;
         private static InputManager Im => FancyConsole.Im;
 

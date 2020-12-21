@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FancyConsoleTest.Utils
+namespace FancyConsoleTest.Old.Utils
 {
     public class GetTabbyThingy
     {
