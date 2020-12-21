@@ -4,23 +4,19 @@
     <projectFile>FancyConsoleTest/FancyConsoleTest.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5a8e786-2be5-49bb-9b77-2ecb18610e80" name="Default Changelist" comment="Fixed design issue where enter would play a role to the downside of its main role. Also added debug command.">
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea.FancyConsoleTest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.FancyConsoleTest/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea.FancyConsoleTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.FancyConsoleTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Windows/.idea/.idea.ConsoleApplication1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Windows/.idea/.idea.ConsoleApplication1/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Windows/ConsoleApplication1/FancyConsole/FancyConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Windows/ConsoleApplication1/FancyConsole/FancyConsole.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c5a8e786-2be5-49bb-9b77-2ecb18610e80" name="Default Changelist" comment="Fixed design issue where enter would play a role to the downside of its main role. Also added debug command." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/3A4/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/11/Array.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/10/Array.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/38F06A60-2917-4752-A47B-E3FAB39B56A6/6/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/133/Thread.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
@@ -100,6 +96,7 @@
       <workItem from="1608071971972" duration="39759000" />
       <workItem from="1608223892611" duration="17642000" />
       <workItem from="1608315347189" duration="263000" />
+      <workItem from="1608405657065" duration="693000" />
     </task>
     <task id="LOCAL-00001" summary="Forgot I put this on github.">
       <created>1608229116445</created>
@@ -136,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608263312979</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="FOL (Fuck our lives)">
+      <created>1608405684239</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608405684239</updated>
+    </task>
+    <task id="LOCAL-00007" summary="FOL (Fuck our lives) x2">
+      <created>1608405747152</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608405747152</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +174,8 @@
     <MESSAGE value="Fixed smth, added multiple colours to FancyText, and added nice tab selection when hints length supersedes max width." />
     <MESSAGE value="Fixed scrolling issue." />
     <MESSAGE value="Fixed design issue where enter would play a role to the downside of its main role. Also added debug command." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed design issue where enter would play a role to the downside of its main role. Also added debug command." />
+    <MESSAGE value="FOL (Fuck our lives)" />
+    <MESSAGE value="FOL (Fuck our lives) x2" />
+    <option name="LAST_COMMIT_MESSAGE" value="FOL (Fuck our lives) x2" />
   </component>
 </project>

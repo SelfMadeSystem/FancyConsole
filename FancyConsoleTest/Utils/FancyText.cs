@@ -9,10 +9,6 @@ namespace FancyConsoleTest.Utils
     {
         public string Text;
 
-        //public bool BoldStrikethrough;
-        //public bool Underline;
-        //public bool Italic; //\x1b[1m
-        //public bool Reset; //\x1b[0m
         public FancyColor[] Colors;
 
         // public FancyColor BgColor; // Don't use this
@@ -124,12 +120,13 @@ namespace FancyConsoleTest.Utils
         {
             // SetConsoleColor();
             // Console.Write(Text);
+            if (ConsoleUtils.GetColorSupport() == 1) SetConsoleColor();
             Console.Write(GetConsoleStringRaw());
         }
 
         public string GetConsoleStringRaw()
         {
-            return Colors.Aggregate("", (current, item) => current + item.PrintFunc) + Text;
+            return (ConsoleUtils.GetColorSupport() == 2 ? Colors.Aggregate("", (current, item) => current + item.PrintFunc) : "") + Text;
         }
 
         public string GetConsoleString()

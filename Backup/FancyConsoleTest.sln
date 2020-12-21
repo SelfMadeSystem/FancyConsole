@@ -1,8 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
-MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FancyConsoleTest", "FancyConsoleTest\FancyConsoleTest.csproj", "{AF5C8772-E5F2-43EA-8876-BAA42EA75B93}"
 EndProject
 Global
@@ -15,11 +12,5 @@ Global
 		{AF5C8772-E5F2-43EA-8876-BAA42EA75B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF5C8772-E5F2-43EA-8876-BAA42EA75B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF5C8772-E5F2-43EA-8876-BAA42EA75B93}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A6C203D2-7680-4F10-A258-83B54DD20045}
 	EndGlobalSection
 EndGlobal
