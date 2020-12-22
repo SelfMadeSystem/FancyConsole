@@ -3,6 +3,7 @@ using FancyConsoleTest.New.Minimal;
 using System;
 using System.Linq;
 using FancyConsoleTest.New.Guis;
+using Terminal.Gui;
 
 namespace FancyConsoleTest.New {
     public class GuiApp {
