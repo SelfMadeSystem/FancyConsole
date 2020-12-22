@@ -16,4 +16,8 @@ namespace FancyConsoleTest.New.Guis {
             Application.Run();
         }
     }
+
+    internal class TopBar : MenuBar {
+        // todo: make me
+    }
 }
