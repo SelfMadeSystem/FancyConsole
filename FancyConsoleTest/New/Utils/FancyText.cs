@@ -35,7 +35,7 @@ namespace FancyConsoleTest.New.Utils {
                 } else {
                     len++;
                     // Console.WriteLine("{" + Text + +len + "}");
-                    if (len > ConsoleUtils.Width) {
+                    if (len > width) {
                         len = 0;
                         list.Add(new FancyText(str, Colors));
                         str = c.ToString();
@@ -52,7 +52,7 @@ namespace FancyConsoleTest.New.Utils {
             var lines = new List<FancyText>();
             var text = this;
             do {
-                var split = text.Split(lines.Count > 0 ? lines[^1].GetWidthRaw() : 0);
+                var split = text.Split(width, lines.Count > 0 ? lines[^1].GetWidthRaw() : 0);
                 if (split.Count == 0) continue;
                 // Console.WriteLine("{" + (lines.Count > 0 ? lines[^1].Text.Length : 0) + "}");
                 var first = split[0];
@@ -87,16 +87,16 @@ namespace FancyConsoleTest.New.Utils {
             return w;
         }
 
-        public void PrintNext() {
-            PrintText();
-            Next?.PrintNext();
+        public void PrintNext(bool consoleColors = false) {
+            PrintText(consoleColors);
+            Next?.PrintNext(consoleColors);
         }
 
-        public void PrintText() {
-            // SetConsoleColor();
+        public void PrintText(bool consoleColors = false) {
+            if (consoleColors) SetConsoleColor();
             // Console.Write(Text);
             // if (ConsoleUtils.GetColorSupport() == 1) SetConsoleColor();
-            Console.Write(GetConsoleStringRaw());
+            Console.Write(consoleColors ? Text : GetConsoleStringRaw());
         }
 
         public string GetConsoleStringRaw() {

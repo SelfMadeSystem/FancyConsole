@@ -2,12 +2,11 @@
 using FancyConsoleTest.New.Minimal;
 using System;
 using System.Linq;
-using FancyConsoleTest.New.Guis;
-using Terminal.Gui;
 
 namespace FancyConsoleTest.New {
     public class GuiApp {
         public static event Action<string> LineRead;
+        public static bool ConsoleColors = false;
         public static bool Minimal = false;
         public static bool Print = true;
         public static void Start(string[] args) {
@@ -16,13 +15,14 @@ namespace FancyConsoleTest.New {
                 if (s.Equals("tprint")) Print = !Print;
                 if (!Print) return;
                 Log(new FancyText("[Log] ", FancyColor.Red) {
-                    Next = new FancyText(s + "\n", FancyColor.Reset)
+                    Next = new FancyText(s, FancyColor.Reset)
                 });
             };
+            ConsoleColors = args.Contains("--console-colors");
             if (Minimal = args.Contains("--minimal")) { // do minimal when using in a web-panel-thingy like pterodactyl
                 MinimalStart(args);
             } else {
-                GuiStart(args);
+                TabStart(args);
             }
         }
 
@@ -33,11 +33,11 @@ namespace FancyConsoleTest.New {
         public static void Log(FancyText text) {
             if (Minimal) {
                 BasicConsole.Instance.Log(text);
-            } else LogGui.Instance.Log(text);
+            } else TabConsole.Instance.Log(text);
         }
 
-        private static void GuiStart(string[] args) {
-            GuiHndlr.Instance.Start(args);
+        private static void TabStart(string[] args) {
+            TabConsole.Instance.StartInputting(args);
         }
 
         private static void MinimalStart(string[] args) {
