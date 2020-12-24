@@ -144,12 +144,15 @@ namespace FancyConsoleTest.New.Minimal
 
         private void SetCursorPos()
         {
+            if (ConsoleUtils.Width < 5) return;
             Console.CursorVisible = false;
             AddCursorPos();
             Console.SetCursorPosition(0, Console.CursorTop);
-            var printLine = _line;
-            Console.Write(printLine + new string(' ', ConsoleUtils.Width - printLine.Length - 2));
-            Console.SetCursorPosition(_cursor, Console.CursorTop);
+            var i = Math.Max(0, _cursor - ConsoleUtils.Width + 3);
+            var printLine = _line.Substring(i,
+                Math.Min(_line.Length, _cursor < ConsoleUtils.Width ? _line.Length : _cursor + 2) - i);
+            Console.Write(printLine + new string(' ', Math.Max(0, ConsoleUtils.Width - printLine.Length - 1)));
+            Console.SetCursorPosition(Math.Min(ConsoleUtils.Width - 3, _cursor), Console.CursorTop);
             Console.CursorVisible = true;
         }
 
