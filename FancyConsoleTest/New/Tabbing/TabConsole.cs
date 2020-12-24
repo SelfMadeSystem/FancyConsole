@@ -8,6 +8,9 @@ namespace FancyConsoleTest.New.Minimal {
     public class TabConsole {
         private static readonly char[] Whitespace = new[] { ' ', '\t', '\n', '\u200b', '|'};
         public static TabConsole Instance = new TabConsole();
+        public List<string> history = new List<string>();
+        public int historyIndex;
+        public string savedLine = "";
         public bool hinting;
         public List<string> hints;
         public string currentArg = "";
@@ -24,6 +27,7 @@ namespace FancyConsoleTest.New.Minimal {
                         break;
                     case ConsoleKey.Enter:
                         Console.Write("\n");
+                        history.Insert(0, line);
                         GuiApp.LineRed(line);
                         Reset();
                         break;
@@ -40,6 +44,12 @@ namespace FancyConsoleTest.New.Minimal {
                         } else {
                             AddCursorPos(1);
                         }
+                        break;
+                    case ConsoleKey.UpArrow:
+                        History(1);
+                        break;
+                    case ConsoleKey.DownArrow:
+                        History(-1);
                         break;
                     case ConsoleKey.Backspace:
                         if (Key.Modifiers.HasFlag(ConsoleModifiers.Control)) {
@@ -75,16 +85,19 @@ namespace FancyConsoleTest.New.Minimal {
 
         private void Reset() {
             hinting = false;
-            currentArg = line = "";
+            currentArg = line = savedLine = "";
             cursor = 0;
+            historyIndex = -1;
         }
 
         private void SetCursorPos() {
+            Console.CursorVisible = false;
             AddCursorPos();
             Console.SetCursorPosition(0, Console.CursorTop);
             var printLine = line;
-            Console.Write(printLine + new string(' ', ConsoleUtils.Width - printLine.Length));
+            Console.Write(printLine + new string(' ', ConsoleUtils.Width - printLine.Length - 2));
             Console.SetCursorPosition(cursor, Console.CursorTop);
+            Console.CursorVisible = true;
         }
 
         private void AddCursorPos(int i = 0) {
@@ -110,13 +123,25 @@ namespace FancyConsoleTest.New.Minimal {
             return skipped;
         }
 
+        private void History(int i) {
+            if (historyIndex < 0) savedLine = line;
+            historyIndex += i;
+            if (historyIndex < -1) historyIndex = -1;
+            else if (historyIndex >= history.Count) historyIndex = history.Count - 1;
+            if (historyIndex < 0) line = savedLine;
+            else line = history[historyIndex];
+            cursor = line.Length;
+        }
+
         public void Log(FancyText text) {
+            Console.CursorVisible = false;
             var top = Console.CursorTop;
             Console.SetCursorPosition(0, top);
             Console.Write(new string(' ', ConsoleUtils.Width));
             Console.SetCursorPosition(0, top);
             text.SetNext(new FancyText("\n", FancyColor.Reset));
             text.PrintNext(GuiApp.ConsoleColors);
+            SetCursorPos();
         }
     }
 }
