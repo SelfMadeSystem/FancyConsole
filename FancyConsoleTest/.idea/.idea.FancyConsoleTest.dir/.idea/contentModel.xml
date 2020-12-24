@@ -8,12 +8,11 @@
       <e p="FancyConsoleTest.csproj" t="IncludeRecursive" />
       <e p="New" t="Include">
         <e p="GuiApp.cs" t="Include" />
-        <e p="Guis" t="Include">
-          <e p="GuiHndlr.cs" t="Include" />
-          <e p="LogGui.cs" t="Include" />
-        </e>
         <e p="Minimal" t="Include">
           <e p="BasicConsole.cs" t="Include" />
+        </e>
+        <e p="Tabbing" t="Include">
+          <e p="TabConsole.cs" t="Include" />
         </e>
         <e p="Utils" t="Include">
           <e p="ConsoleUtils.cs" t="Include" />

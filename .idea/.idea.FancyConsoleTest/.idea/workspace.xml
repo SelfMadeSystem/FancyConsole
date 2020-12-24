@@ -4,7 +4,45 @@
     <projectFile>FancyConsoleTest/FancyConsoleTest.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5a8e786-2be5-49bb-9b77-2ecb18610e80" name="Default Changelist" comment="Fixed design issue where enter would play a role to the downside of its main role. Also added debug command." />
+    <list default="true" id="c5a8e786-2be5-49bb-9b77-2ecb18610e80" name="Default Changelist" comment="Fixed design issue where enter would play a role to the downside of its main role. Also added debug command.">
+      <change afterPath="$PROJECT_DIR$/FancyConsoleTest/New/Utils/GetTabbyThingy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FancyConsoleTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/FancyConsoleTest/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FancyConsoleTest/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/FancyConsoleTest/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/FancyConsoleTest/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/.idea/.idea.FancyConsoleTest.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/.idea/.idea.FancyConsoleTest.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/.idea/.idea.FancyConsoleTest.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/.idea/.idea.FancyConsoleTest.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/New/GuiApp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/New/GuiApp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/New/Minimal/BasicConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/New/Minimal/BasicConsole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/New/Tabbing/TabConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/New/Tabbing/TabConsole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/New/Utils/ConsoleUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/New/Utils/ConsoleUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/New/Utils/FancyColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/New/Utils/FancyColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/New/Utils/FancyText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/New/Utils/FancyText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/Debug/netcoreapp3.1/FancyConsoleTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/FancyConsoleTest.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/FancyConsoleTest.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/FancyConsoleTest.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/FancyConsoleTest.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FancyConsoleTest/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/FancyConsoleTest/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +63,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/38F06A60-2917-4752-A47B-E3FAB39B56A6/57/892c4aea/ConsoleCancelEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8C0ECD06-9F4E-4803-89F2-F3488D203E9C/2C/Sum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3B6C5D66-DCBD-4F65-89EC-674981B6B4E4/8c/90529483/ConsoleCancelEventArgs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/19B3447F-EED7-48F4-B362-071ED33E9131/33/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8C0ECD06-9F4E-4803-89F2-F3488D203E9C/26/Select.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/174/StringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8C0ECD06-9F4E-4803-89F2-F3488D203E9C/2E/ToCollection.cs" root0="SKIP_HIGHLIGHTING" />
@@ -37,8 +76,15 @@
       <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/GetTabbyThingy.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyColor.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/Utils/FancyText.cs" />
-      <option value="$PROJECT_DIR$/FancyConsoleTest/Program.cs" />
       <option value="$PROJECT_DIR$/FancyConsoleTest/FancyConsole/FancyConsole.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/New/Utils/FancyText.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/New/Utils/FancyColor.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/New/Minimal/BasicConsole.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/New/Utils/ConsoleUtils.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/Program.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/New/Utils/GetTabbyThingy.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/New/GuiApp.cs" />
+      <option value="$PROJECT_DIR$/FancyConsoleTest/New/Tabbing/TabConsole.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lhn7XSWKMCDENfvJiTpXdAhsvX" />
@@ -61,16 +107,16 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="FancyConsoleTest" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1/FancyConsoleTest.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FancyConsoleTest/bin/Debug/netcoreapp3.1" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="1" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/FancyConsoleTest/FancyConsoleTest.csproj" />
@@ -78,7 +124,7 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -97,6 +143,7 @@
       <workItem from="1608223892611" duration="17642000" />
       <workItem from="1608315347189" duration="263000" />
       <workItem from="1608405657065" duration="693000" />
+      <workItem from="1608773062411" duration="6084000" />
     </task>
     <task id="LOCAL-00001" summary="Forgot I put this on github.">
       <created>1608229116445</created>

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "FancyConsoleTest/1.0.0": {
         "dependencies": {
+          "Microsoft.NETFramework.ReferenceAssemblies": "1.0.0",
           "Terminal.Gui": "0.90.3"
         },
         "runtime": {

@@ -1,32 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "D:\\appdata\\projects\\C#\\FancyConsoleTest\\FancyConsoleTest\\FancyConsoleTest.csproj": {}
+    "/media/shoghi/Data/appdata/projects/C#/FancyConsoleTest/FancyConsoleTest/FancyConsoleTest.csproj": {}
   },
   "projects": {
-    "D:\\appdata\\projects\\C#\\FancyConsoleTest\\FancyConsoleTest\\FancyConsoleTest.csproj": {
+    "/media/shoghi/Data/appdata/projects/C#/FancyConsoleTest/FancyConsoleTest/FancyConsoleTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\appdata\\projects\\C#\\FancyConsoleTest\\FancyConsoleTest\\FancyConsoleTest.csproj",
+        "projectUniqueName": "/media/shoghi/Data/appdata/projects/C#/FancyConsoleTest/FancyConsoleTest/FancyConsoleTest.csproj",
         "projectName": "FancyConsoleTest",
-        "projectPath": "D:\\appdata\\projects\\C#\\FancyConsoleTest\\FancyConsoleTest\\FancyConsoleTest.csproj",
-        "packagesPath": "C:\\Users\\Shoghi\\.nuget\\packages\\",
-        "outputPath": "D:\\appdata\\projects\\C#\\FancyConsoleTest\\FancyConsoleTest\\obj\\",
+        "projectPath": "/media/shoghi/Data/appdata/projects/C#/FancyConsoleTest/FancyConsoleTest/FancyConsoleTest.csproj",
+        "packagesPath": "/home/shoghi/.nuget/packages/",
+        "outputPath": "/media/shoghi/Data/appdata/projects/C#/FancyConsoleTest/FancyConsoleTest/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Shoghi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/shoghi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,8 +35,19 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )",
+              "autoReferenced": true
+            },
             "Terminal.Gui": {
               "target": "Package",
               "version": "[0.90.3, )"
@@ -60,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.404/RuntimeIdentifierGraph.json"
         }
       }
     }

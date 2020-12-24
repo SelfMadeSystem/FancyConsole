@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cnxyQ0HjtwocP72VwFRpSfciR7+PK4WGALiC7gaOLb8+4E41lza6dJp0SZUQw/5KFBR6AKUS48wSCBrDYecD8A==",
+  "dgSpecHash": "v+1P4vQmqCs12ErybdLWWb4p57XiqzC4aqlOWQ+A8dozh7Kj5Mdre58cGJx/+lYTLNuVdEtcftUGboFN3q7GGA==",
   "success": true,
-  "projectFilePath": "D:\\appdata\\projects\\C#\\FancyConsoleTest\\FancyConsoleTest\\FancyConsoleTest.csproj",
+  "projectFilePath": "/media/shoghi/Data/appdata/projects/C#/FancyConsoleTest/FancyConsoleTest/FancyConsoleTest.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Shoghi\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
-    "C:\\Users\\Shoghi\\.nuget\\packages\\nstack.core\\0.14.0\\nstack.core.0.14.0.nupkg.sha512",
-    "C:\\Users\\Shoghi\\.nuget\\packages\\terminal.gui\\0.90.3\\terminal.gui.0.90.3.nupkg.sha512"
+    "/home/shoghi/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.0/microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "/home/shoghi/.nuget/packages/nstack.core/0.14.0/nstack.core.0.14.0.nupkg.sha512",
+    "/home/shoghi/.nuget/packages/terminal.gui/0.90.3/terminal.gui.0.90.3.nupkg.sha512"
   ],
   "logs": []
 }

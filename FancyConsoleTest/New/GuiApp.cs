@@ -3,44 +3,65 @@ using FancyConsoleTest.New.Minimal;
 using System;
 using System.Linq;
 
-namespace FancyConsoleTest.New {
-    public class GuiApp {
+namespace FancyConsoleTest.New
+{
+    public static class GuiApp
+    {
         public static event Action<string> LineRead;
         public static bool ConsoleColors = false;
         public static bool Minimal = false;
         public static bool Print = true;
-        public static void Start(string[] args) {
-            LineRead += (s) => {
+
+        public static void Start(string[] args)
+        {
+            LineRead += (s) =>
+            {
                 if (s.Equals("exit")) Environment.Exit(1);
                 if (s.Equals("tprint")) Print = !Print;
                 if (!Print) return;
-                Log(new FancyText("[Log] ", FancyColor.Red) {
+                Log(new FancyText("[Log] ", FancyColor.Red)
+                {
                     Next = new FancyText(s, FancyColor.Reset)
                 });
             };
             ConsoleColors = args.Contains("--console-colors");
-            if (Minimal = args.Contains("--minimal")) { // do minimal when using in a web-panel-thingy like pterodactyl
+            if (ConsoleColors)
+            {
+                Log(new FancyText("[Log] ", FancyColor.Blue)
+                {
+                    Next = new FancyText("ConsoleColors enabled.", FancyColor.Reset)
+                });
+            }
+            // ReSharper disable once AssignmentInConditionalExpression
+            if (Minimal = args.Contains("--minimal"))
+            {
+                // do minimal when using in a web-panel-thingy like pterodactyl
                 MinimalStart(args);
-            } else {
+            }
+            else
+            {
                 TabStart(args);
             }
         }
 
-        public static void LineRed(string s) {
+        public static void LineRed(string s)
+        {
             LineRead?.Invoke(s);
         }
 
-        public static void Log(FancyText text) {
-            if (Minimal) {
-                BasicConsole.Instance.Log(text);
-            } else TabConsole.Instance.Log(text);
+        public static void Log(FancyText text)
+        {
+            if (Minimal) BasicConsole.Instance.Log(text);
+            else TabConsole.Instance.Log(text);
         }
 
-        private static void TabStart(string[] args) {
+        private static void TabStart(string[] args)
+        {
             TabConsole.Instance.StartInputting(args);
         }
 
-        private static void MinimalStart(string[] args) {
+        private static void MinimalStart(string[] args)
+        {
             BasicConsole.Instance.StartInputting(args);
         }
     }
